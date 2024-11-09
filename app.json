@@ -1,0 +1,34 @@
+{
+  "name": "butterfly-md",
+  "description": "WhatsApp bot using whatsapp-web.js",
+  "repository": "https://github.com/Aloneboytech/butterfly-md",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "whatsapp-web.js",
+    "nodejs"
+  ],
+  "image": "heroku/nodejs",
+  "scripts": {
+    "postdeploy": "npm install"
+  },
+  "env": {
+    "NODE_ENV": {
+      "description": "The environment where the app is running",
+      "value": "production"
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ],
+  "formation": {
+    "bot": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "logo": "https://example.com/logo.png"
+}
